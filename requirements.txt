@@ -1,15 +1,11 @@
 import os
-import asyncio
-import json
-import logging
-from aiogram import Bot, Dispatcher, types, F
-from aiogram.filters import Command
-from pptx import Presentation
-import google.generativeai as genai
+from aiogram import Bot
 
-# Tokenlarni xavfsiz yuklash (Render sozlamalaridan oladi)
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# Tokenni kod ichiga yozmang, Render'dan oladi:
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+
+bot = Bot(token=BOT_TOKEN)
 
 # Bot va Gemini sozlamalari
 bot = Bot(token=BOT_TOKEN)
